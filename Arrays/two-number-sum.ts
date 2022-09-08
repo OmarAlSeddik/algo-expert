@@ -1,6 +1,6 @@
 // Optimal Solution 1 //
-const twoNumberSum = (array, targetSum) => {
-  const numHash = {};
+const twoNumberSum = (array: number[], targetSum: number) => {
+  const numHash: { [key: number]: boolean } = {};
   for (const num of array) {
     let complement = targetSum - num;
     if (complement in numHash) return [num, complement];
@@ -12,7 +12,7 @@ const twoNumberSum = (array, targetSum) => {
 // Space Complexity: O(n)
 
 // Optimal Solution 2 //
-const twoNumberSum2 = (array, targetSum) => {
+const twoNumberSum2 = (array: number[], targetSum: number) => {
   array.sort((a, b) => a - b);
   let leftPointer = 0;
   let rightPointer = array.length - 1;
