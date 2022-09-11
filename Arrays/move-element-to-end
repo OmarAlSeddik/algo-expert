@@ -1,0 +1,17 @@
+const moveElementToEnd = (array: number[], toMove: number) => {
+  let leftPointer = 0;
+  let rightPointer = array.length - 1;
+  while (leftPointer < rightPointer) {
+    if (array[leftPointer] !== toMove) leftPointer++;
+    else if (array[rightPointer] === toMove) rightPointer--;
+    else {
+      array[leftPointer] = array[rightPointer];
+      array[rightPointer] = toMove;
+      leftPointer++;
+      rightPointer--;
+    }
+  }
+  return array;
+};
+// Time Complexity: O(n)
+// Space Complexity: O(1)
