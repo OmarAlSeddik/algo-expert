@@ -1,15 +1,13 @@
 const moveElementToEnd = (array: number[], toMove: number) => {
-  let leftPointer = 0;
-  let rightPointer = array.length - 1;
-  while (leftPointer < rightPointer) {
-    if (array[leftPointer] !== toMove) leftPointer++;
-    else if (array[rightPointer] === toMove) rightPointer--;
-    else {
-      array[leftPointer] = array[rightPointer];
-      array[rightPointer] = toMove;
-      leftPointer++;
-      rightPointer--;
+  let i = 0;
+  let j = array.length - 1;
+  while (i < j) {
+    while (i < j && array[j] === toMove) j--;
+    if (array[i] === toMove) {
+      array[i] = array[j];
+      array[j] = toMove;
     }
+    i++;
   }
   return array;
 };
