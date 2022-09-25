@@ -10,3 +10,5 @@ const insertionSort = (array: number[]) => {
   }
   return array;
 };
+// Time Complexity: O(n^2)
+// Space Complexity: O(1)
