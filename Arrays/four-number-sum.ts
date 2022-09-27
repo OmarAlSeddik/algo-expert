@@ -6,7 +6,7 @@ const fourNumberSum = (array: number[], targetSum: number) => {
   const pairSums: Pairs = {};
   const quadruplets: number[][] = [];
   for (let i = 0; i < array.length - 1; i++) {
-    for (let j = i + 1; j < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
       const currentSum = array[i] + array[j];
       const delta = targetSum - currentSum;
       if (delta in pairSums) {
