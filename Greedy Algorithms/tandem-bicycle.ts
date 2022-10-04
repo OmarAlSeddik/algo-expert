@@ -3,15 +3,13 @@ const tandemBicycle = (
   blueShirtSpeeds: number[],
   fastest: boolean
 ): number => {
-  let solution = 0;
-  fastest
-    ? redShirtSpeeds.sort((a, b) => a - b)
-    : redShirtSpeeds.sort((a, b) => b - a);
+  redShirtSpeeds.sort((a, b) => (fastest ? a - b : b - a));
   blueShirtSpeeds.sort((a, b) => b - a);
+  let solution = 0;
   for (let i = 0; i < redShirtSpeeds.length; i++) {
     let red = redShirtSpeeds[i];
     let blue = blueShirtSpeeds[i];
-    solution += red > blue ? red : blue;
+    solution += Math.max(red, blue);
   }
 
   return solution;
