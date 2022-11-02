@@ -15,3 +15,5 @@ const validStartingCity = (
   }
   return solution;
 };
+// Time Complexity: O(n)
+// Space Complexity: O(1)

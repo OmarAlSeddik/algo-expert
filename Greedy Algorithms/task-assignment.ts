@@ -10,3 +10,5 @@ const taskAssignment = (k: number, tasks: number[]) => {
   }
   return solution;
 };
+// Time Complexity: O(nlogn)
+// Space Complexity: O(n)
